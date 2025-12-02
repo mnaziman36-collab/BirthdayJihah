@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love! 💖</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Subtle Flower Background -->
+    <div class="flower-bg"></div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Envelope View -->
+    <div id="envelopeView" class="flex flex-col items-center justify-center text-center fixed inset-0 z-20">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-pink-700 mb-8 z-10 font-['Playfair_Display']">
+            A Special Delivery...
+        </h1>
+
+        <div id="envelopeContainer" class="envelope-container relative">
+            <div class="absolute inset-0 -top-12 -left-12 -right-12 -bottom-12 z-0 opacity-70">
+                <span class="absolute top-1/4 left-0 text-6xl transform -rotate-12">💐</span>
+                <span class="absolute bottom-1/4 right-0 text-7xl transform rotate-12">🌹</span>
+                <span class="absolute top-0 right-1/4 text-5xl transform rotate-6">🌸</span>
+                <span class="absolute bottom-0 left-1/4 text-6xl transform -rotate-6">🌷</span>
+            </div>
+
+            <div id="envelope" class="envelope relative z-10">
+                <div class="envelope-flap"></div>
+                <div class="absolute inset-0 flex items-center justify-center p-4">
+                    <p class="text-xl font-bold text-gray-700 select-none">
+                        Opening Automatically...
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-8 text-xl text-pink-600 z-10">
+            For my beautiful girlfriend, happy birthday!
+        </p>
+    </div>
+
+    <!-- Letter Modal -->
+    <div id="letterModal" class="letter-modal">
+        <h2 class="text-3xl font-extrabold text-pink-700 mb-4 text-center font-['Playfair_Display']">
+            Happy Birthday, My Dearest! <span class="icon-heart">❤️</span>
+        </h2>
+
+        <div class="letter-content text-lg p-4 bg-pink-50/50 rounded-lg shadow-inner">
+            <p class="mb-6">My love,</p>
+
+            <p class="mb-6 indent-8">
+                Every year with you feels like the best year, and watching you shine brighter with each passing day is the greatest gift I could ever ask for. You are the warmth in my mornings and the peace in my evenings. Thank you for filling my life with so much joy, laughter, and endless love. I cherish every moment we share.
+            </p>
+
+            <div id="customLetterArea"
+                contenteditable="true"
+                class="editable-area bg-pink-100/30 text-gray-800 transition duration-300"
+                placeholder="Click here to type your personal message! (It saves automatically when you click away.)"></div>
+
+            <p id="saveStatus" class="text-sm mt-2 text-green-600 h-5"></p>
+
+            <p class="mt-8 text-right">
+                Forever Yours,<br>
+                [Your Name Here]
+            </p>
+        </div>
+
+        <button onclick="hideModalAndReset()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-2xl">
+            &times;
+        </button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
